@@ -130,6 +130,9 @@ def main():
         do_show(clnt, args)
     elif args.command == 'version':
         do_version(clnt, args)
+    elif args.command[0:10] == 'soundalarm':
+        cmd, level = args.command.split('-')
+            do_soundalarm(clnt, level)
 
 if __name__ == '__main__':
     main()
