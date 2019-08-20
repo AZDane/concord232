@@ -615,8 +615,13 @@ class AlarmPanelInterface(object):
                                       general_type, specific_type)
         self.enqueue_synthetic_msg_for_rx(msg)
         
-    def soundalarm(self):
-        self.send_keypress([0x0e])       
+    def soundalarm(self,option):
+        if option == None:
+            self.send_keypress([0x4c])
+        elif option == 'auxiliary':
+            self.send_keypress([0x4d])
+        elif option == 'fire':
+            self.send_keypress([0x4e])
                 
                 
 
