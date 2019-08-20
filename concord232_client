@@ -132,7 +132,7 @@ def main():
         do_version(clnt, args)
     elif args.command[0:5] == 'alarm':
         cmd, option = args.command.split('-')
-            do_soundalarm(clnt, option)
+        do_soundalarm(clnt, option)
 
 if __name__ == '__main__':
     main()
