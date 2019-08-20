@@ -96,6 +96,8 @@ def command():
         CONTROLLER.disarm(args.get('master_pin'))
     elif args.get('cmd') == 'keys':
         CONTROLLER.send_keys(args.get('keys'),args.get('group'))
+    elif args.get('cmd') == 'alarm':
+        CONTROLLER.soundalarm()
     return flask.Response()
 
 @app.route('/version')
